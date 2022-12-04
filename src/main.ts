@@ -9,7 +9,7 @@ import vue3GoogleLogin from 'vue3-google-login'
 const app = createApp(App)
 
 app.use(vue3GoogleLogin, {
-    clientId: '888732665747-s3eqbvab8r7sv7ddfiur0rr5b176jheo.apps.googleusercontent.com'
+    clientId: 'YOUR_CLIENT_ID.apps.googleusercontent.com'
 })
 
 app
