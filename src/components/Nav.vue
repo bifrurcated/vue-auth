@@ -28,12 +28,15 @@ export default {
 import {computed} from "vue";
 import axios from "axios";
 import {useStore} from "vuex";
+import { googleLogout } from "vue3-google-login"
 
 const store = useStore();
 const auth = computed(() => store.state.auth);
 
 const logout = async () => {
   await axios.post('logout', {}, {withCredentials: true});
+
+  await googleLogout()
 
   axios.defaults.headers.common['Authorization'] = '';
 

@@ -50,7 +50,6 @@ const submit = async () => {
 
 
 const googleAuth = async (response) => {
-  // decodeCredential will retrive the JWT payload from the credential
   const {status, data} = await axios.post('google-oauth2', {
     token: response.credential
   }, {withCredentials: true});
